@@ -222,6 +222,12 @@ typedef struct {
 // Receive descriptor flags.
 #define kXenonEthernetRxLengthMask            BITRange(0, 15)
 
+// Specifies UDP checksum verification was OK.
+#define kXenonEthernetRxFlagsUdpChecksumOk    BIT24
+// Specifies TCP checksum verification was OK.
+#define kXenonEthernetRxFlagsTcpChecksumOk    BIT25
+// Specifies IP checksum verification was OK.
+#define kXenonEthernetRxFlagsIpChecksumOk     BIT26
 // Fire the respective interrupt after the descriptor is processed.
 #define kXenonEthernetRxFlagsInterrupt        BIT30
 // If set, the hardware owns the descriptor and the driver must not change it.
